@@ -88,7 +88,7 @@ ul {
 
 /* Section Spacing */
 section {
-    padding: 100px 0;
+    padding: 20px 0;
 }
 
 /* Navbar */
@@ -250,6 +250,20 @@ section {
     justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+        /* Compensa a altura da navbar fixa */
+        align-items: center;
+        /* Mantém centralizado mas com o padding o centro visual desce um pouco */
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        /* Reduz um pouco o tamanho da fonte para ajudar no espaço */
+    }
+}
+
 /* Glassmorphism Cards (Preparation) */
 .glass-card {
     background: rgba(255, 255, 255, 0.03);
@@ -296,6 +310,8 @@ section {
 }
 
 /* Services */
+
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
