@@ -165,10 +165,11 @@ section {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: flex-start;
     padding-top: 140px;
+    padding-bottom: 20px;
     position: relative;
     overflow: hidden;
     /* Fallback Gradient Background since Image Generation failed */
@@ -251,16 +252,46 @@ section {
     justify-content: center;
 }
 
+.social-hero {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-hero a {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-hero a:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
 @media screen and (max-width: 768px) {
     .hero {
-        padding-top: 80px;
-        /* Compensa a altura da navbar fixa */
-        align-items: center;
-        /* Mantém centralizado mas com o padding o centro visual desce um pouco */
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        /* Compensa a altura da navbar fixa e posiciona mais ao topo */
+        align-items: flex-start;
     }
 
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         /* Reduz um pouco o tamanho da fonte para ajudar no espaço */
     }
 }
